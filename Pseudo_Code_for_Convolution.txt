@@ -1,0 +1,30 @@
+
+        //
+        // Implementing a convolution manually.
+        // Also called a "local average".
+        // Also called filtering.
+        // 
+        hourly_data   = [ 0 ... 70 ]
+        filter_kernel = [ 0.06, 0.12, 0.20, 0.24, 0.20, 0.12, 0.06 ];
+
+        % For each hour, find the results:
+	for hour_index = 1  : 70 
+             total = 0;
+             for filter_index = 1 : length( filter_kernel )
+                   factor = filter_kernel(filter_index);
+                   data_index = hour_index + filter_index - 3;
+                   if ( data_index < 0 )
+      			data_to_scale = 0;
+                   else if ( data_index >  70 )
+      			data_to_scale = 0;
+                   else 
+                        data_to_scale = hourly_data( data_index )
+                   end
+                   temp = factor * data_index;
+                   total = total + temp;
+             end 
+             output(hour_index) = total;
+        end 
+
+ 	plot( output );
+
