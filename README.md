@@ -34,7 +34,7 @@ Graph your results in a continuous graph.
 4. Generate a histogram that shows the most common week of the semester for events to happen.
 
 ## Results
-![results](Results.pdf)
+![results](results.png)
 
 
 
