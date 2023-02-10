@@ -26,7 +26,6 @@ plus 0.06 * the fraction of events that happened three days later.
 
 Use zeros for the days that are outside of the data range.<br />
 This gives an estimate of how many events will happen on any day, smoothed out. It avoids random noise in the data.
-
 Graph your results in a continuous graph.
 
 3. Generate a histogram that shows the most common day of the week for events to happen.
