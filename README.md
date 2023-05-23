@@ -1,4 +1,4 @@
-# Smoothing-Discrete-Events_Pandas
+# Smoothing-Discrete-Events
 As a part of the curriculum, course CSCI-720 - Big Data Analytics
 
 ## Problem Statement
