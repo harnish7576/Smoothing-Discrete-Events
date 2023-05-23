@@ -15,14 +15,14 @@ First you want to normalize the histogram you created before. To normalize the h
 Then, you will smooth those values using a Gaussian filter with the following kernel:<br />
 Gaussian Coefficients: [ 0.06 0.12 0.20 0.24 0.20 0.12 0.06 ]
 
-For each day, you estimate the number of events as the number in your normalized histogram on each day, 
-plus 0.06 * the fraction of events that happened three days before,<br />
-plus 0.12 * the fraction of events that happened two days before,<br />
-plus 0.20 * the fraction of events that happened one day before,<br />
-plus 0.24 * the fraction of events that happened on that day,<br />
-plus 0.20 * the fraction of events that happened the following day,<br /> 
-plus 0.12 * the fraction of events that happened two days later,<br />
-plus 0.06 * the fraction of events that happened three days later.
+- For each day, you estimate the number of events as the number in your normalized histogram on each day, 
+- plus 0.06 * the fraction of events that happened three days before,<br />
+- plus 0.12 * the fraction of events that happened two days before,<br />
+- plus 0.20 * the fraction of events that happened one day before,<br />
+- plus 0.24 * the fraction of events that happened on that day,<br />
+- plus 0.20 * the fraction of events that happened the following day,<br /> 
+- plus 0.12 * the fraction of events that happened two days later,<br />
+- plus 0.06 * the fraction of events that happened three days later.
 
 Use zeros for the days that are outside of the data range.<br />
 This gives an estimate of how many events will happen on any day, smoothed out. It avoids random noise in the data.
